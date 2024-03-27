@@ -14,7 +14,7 @@ function DirectionsList() {
               <h4>Leg {legIndex + 1}</h4>
               <ol>
                 {leg.steps.map((step, stepIndex) => (
-                  <li key={stepIndex}>{step.instructions}</li>
+                  <li key={stepIndex} dangerouslySetInnerHTML={{ __html: step.instructions }} />
                 ))}
               </ol>
             </div>
