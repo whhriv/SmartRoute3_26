@@ -103,23 +103,23 @@ new Promise((resolve, reject)=>{
 
 
   return (
-    <div>
-    <FloatingLabel className="pt-3" controlId="start" label="Start">
+    <div style={{borderRadius: '10%'}}>
+    <FloatingLabel className="pt-3" controlId="start" label="Starting Point">
       <Form.Control
         className="w-90"
         type="text"
-        placeholder="Start"
+        placeholder="Starting Point"
         value={start}
         onChange={(e) => setStart(e.target.value)}
       />
     </FloatingLabel>
     {fields.map((field, index) => (
       <div key={index} className="d-flex align-items-center">
-        <FloatingLabel controlId={`stop${index}`} label="Stop" className="flex-grow-1">
+        <FloatingLabel controlId={`stop${index}`} label="Add Stop" className="flex-grow-1">
           <Form.Control
             className="w-100"
             type="text"
-            placeholder="Stop"
+            placeholder="Add Stop"
             value={field.value || ""}
             onChange={(e) => handleChange(index, e)}
           />
@@ -134,7 +134,7 @@ new Promise((resolve, reject)=>{
         +
       </Button>
     </div>
-    <div className="d-flex justify-content-center">
+    <div className="pb-3 d-flex justify-content-center">
       <Button variant="success" onClick={handleFormSubmit}>Generate your Route</Button>
     </div>
   </div>
