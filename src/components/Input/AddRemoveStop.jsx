@@ -31,6 +31,7 @@ const AddRemoveStop = () => {
   //                               setShowButton(false);
   //                             };
 
+  sessionStorage.setItem('startPoint', start)
 
   const navigate = useNavigate()
   const addField = () => {

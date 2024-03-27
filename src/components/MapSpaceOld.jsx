@@ -75,6 +75,7 @@ function Directions( {start, stops }){
 
     directionsService.route({
       origin: sessionStorage.getItem("startPoint"),
+      // origin: 'san diego, ca',
       waypoints: testArray,
       destination:sessionStorage.getItem("startPoint"),
       travelMode: google.maps.TravelMode.DRIVING,

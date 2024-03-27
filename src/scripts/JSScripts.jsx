@@ -7,8 +7,8 @@ async function geocodeAddress(address) {
       return;
     }
   
-   const apiKey = process.env.GOOGLE_MAPS_API_KEY2
-    // const apiKey = 'AIzaSyDbUVVfWx2Ghaty0_o6toUor2W2UZLH1ro';
+  //  const apiKey = process.env.GOOGLE_MAPS_API_KEY2
+    const apiKey = 'AIzaSyDbUVVfWx2Ghaty0_o6toUor2W2UZLH1ro';
     const apiUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=${apiKey}`;
   
     try {
