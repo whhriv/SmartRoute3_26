@@ -104,9 +104,9 @@ new Promise((resolve, reject)=>{
 
   return (
     <div style={{borderRadius: '10%'}}>
-    <FloatingLabel className="ms-3 me-5 pt-3 mb-5" controlId="start" label="Starting Point">
+    <FloatingLabel className="ms-3 me-5 pe-2 pt-3 mb-5 flex-grow-1" controlId="start" label="Starting Point">
       <Form.Control
-        className="w-90"
+        className="w-100"
         type="text"
         placeholder="Starting Point"
         value={start}
@@ -115,17 +115,17 @@ new Promise((resolve, reject)=>{
     </FloatingLabel>
     
     {fields.map((field, index) => (
-      <div key={index} className="ms-3 my-2 d-flex align-items-center">
+      <div key={index} className="ms-3 my-2 d-flex align-items-center ">
         <FloatingLabel controlId={`stop${index}`} label="Add Stop" className="flex-grow-1">
           <Form.Control
-            className="w-100"
+            className="w-100 inputctrl"
             type="text"
             placeholder="Add Stop"
             value={field.value || ""}
             onChange={(e) => handleChange(index, e)}
           />
         </FloatingLabel>
-        <Button className="ms-2" variant="outline-danger" onClick={() => removeField(index)}>
+        <Button className="ms-2" variant="outline-danger" size="lg" onClick={() => removeField(index)}>
           X
         </Button>
       </div>

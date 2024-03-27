@@ -7,7 +7,7 @@ input {
     /* margin: '4px'; */
     /* color: #A5F708 !important; */
     border: black !important;
-    /* border-radius: '75%'; */
+    /* border-radius: 50%; */
 }
 success {
     background-color: #A5F708 !important;
@@ -66,3 +66,8 @@ success {
 /* * {
     background-color: #08A5F7 !important
 } */
+.inputctrl {
+    /* border-radius: 2%; */
+    border-color: black;
+    border-style: solid;
+}
