@@ -126,13 +126,12 @@ new Promise((resolve, reject)=>{
           />
         </FloatingLabel>
         <Button className="ms-2" variant="outline-danger" size="lg" onClick={() => removeField(index)}>
-          X
+          -
         </Button>
       </div>
     ))}
     <div className="mt-3 mb-1 me-5 d-flex justify-content-end">
-      <Button variant="primary" onClick={addField}>
-        +
+      <Button variant="primary" className="btnsize" onClick={addField}>+
       </Button>
     </div>
     <div className="mb-5 pb-5 d-flex justify-content-center">
