@@ -104,7 +104,7 @@ new Promise((resolve, reject)=>{
 
   return (
     <div>
-    <FloatingLabel controlId="start" label="Start">
+    <FloatingLabel className="pt-3" controlId="start" label="Start">
       <Form.Control
         className="w-90"
         type="text"

@@ -8,8 +8,11 @@ import {
   useMap,
 } from "@vis.gl/react-google-maps"
 import 'react-router-dom'
+import ControlPanel from './control/ControlPanel'
 // import AddRemoveStop from '../AddRemoveStopOutside'
 // import { Button } from 'react-bootstrap'
+// import { NavBar } from '../components/navbar'
+
 
 import { stringArraytoWaypoint } from '../scripts/waypointFromString'
 // import ErrorBoundary from './ErrorBoundary'
@@ -25,13 +28,13 @@ export default function DirectionMapSpace() {
         <APIProvider apiKey='AIzaSyAR-r8GJmwcm-9s2gqKkKHa3K4Km145a7Q'
         >
          
-          
-          {/* <AddRemoveStop /> */}
+         
           <Map  >
              
             <Directions />
            
             </Map>
+          
         </APIProvider>  
       </div>
     )
@@ -45,6 +48,8 @@ function Directions( {start, stops }){
   const [directionsRenderer, setDirectionsRenderer] = useState();
   const [routes, setRoutes] = useState([])
   const [routeIndex, setRouteIndex] = useState(0);
+  const [steps, setSteps] = useState()
+
   const selected = routes[routeIndex]
   // const leg = selected?.legs[0];
 
@@ -76,9 +81,24 @@ function Directions( {start, stops }){
     })
     .then((res) => {
       directionsRenderer.setDirections(res);
+      console.log('RESULTS:', res);
+    
+    
+      res.routes.forEach((route, routeIndex) => {
+        console.log(`Route ${routeIndex + 1}:`);
+        
+  
+        route.legs.forEach((leg, legIndex) => {
+          console.log(`  Leg ${legIndex + 1}:`);
+          
+      
+          leg.steps.forEach((step, stepIndex) => {
+            console.log(`    Step ${stepIndex + 1}:`, step);
+          });
+        });
+      });
+    
       setRoutes(res.routes);
-      console.log(routes)
-
     })
     .catch((error) => {
         console.log("error fetching directions:", error)

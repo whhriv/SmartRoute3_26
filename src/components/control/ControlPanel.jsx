@@ -1,7 +1,9 @@
 import * as React from 'react';
+import '../../navbar.css'
 
 function ControlPanel() {
   return (
+    
     <div className="control-panel">
       <h3>Directions</h3>
       <p>

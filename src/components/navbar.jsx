@@ -4,6 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 // import NavDropdown from 'react-bootstrap/NavDropdown';
 import { NavLink } from 'react-router-dom';
+import '../navbar.css'
 function NavBar() {
   return (
     <Navbar expand="sm" className="bg-body-tertiary" data-bs-theme="dark">
