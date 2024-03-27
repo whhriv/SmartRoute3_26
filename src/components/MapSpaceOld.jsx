@@ -8,7 +8,8 @@ import {
   useMap,
 } from "@vis.gl/react-google-maps"
 import 'react-router-dom'
-import ControlPanel from './control/ControlPanel'
+// import ControlPanel from './control/ControlPanel'
+// import DirectionsList from './DirectionList'
 // import AddRemoveStop from '../AddRemoveStopOutside'
 // import { Button } from 'react-bootstrap'
 // import { NavBar } from '../components/navbar'
@@ -17,7 +18,7 @@ import ControlPanel from './control/ControlPanel'
 import { stringArraytoWaypoint } from '../scripts/waypointFromString'
 // import ErrorBoundary from './ErrorBoundary'
 
-export default function DirectionMapSpace() {
+export default function DirectionMapSpace( {routes} ) {
 
     // let apiKey = process.env.GOOGLE_MAPS_API_KEY1
 
@@ -28,7 +29,7 @@ export default function DirectionMapSpace() {
         <APIProvider apiKey='AIzaSyAR-r8GJmwcm-9s2gqKkKHa3K4Km145a7Q'
         >
          
-         
+         {/* <DirectionsList routes={routes} /> */}
           <Map  >
              
             <Directions />
@@ -82,11 +83,14 @@ function Directions( {start, stops }){
     .then((res) => {
       directionsRenderer.setDirections(res);
       console.log('RESULTS:', res);
+      const routes = res.routes
+      sessionStorage.setItem('directions', JSON.stringify(routes))
     
     
       res.routes.forEach((route, routeIndex) => {
-        console.log(`Route ${routeIndex + 1}:`);
-        
+        sessionStorage.setItem(`route${routeIndex}`, JSON.stringify(route));
+        console.log(`Route ${routeIndex + 1}:`, route);
+      
   
         route.legs.forEach((leg, legIndex) => {
           console.log(`  Leg ${legIndex + 1}:`);

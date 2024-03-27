@@ -114,7 +114,7 @@ new Promise((resolve, reject)=>{
       />
     </FloatingLabel>
     {fields.map((field, index) => (
-      <div key={index} className="d-flex align-items-center">
+      <div key={index} className="my-2 d-flex align-items-center">
         <FloatingLabel controlId={`stop${index}`} label="Add Stop" className="flex-grow-1">
           <Form.Control
             className="w-100"

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import MapSpace from './components/Mapping/MapSpace';
 import CreateRoute from './components/Input/AddRemoveStop'
-// import NavBar from './components/navbar'
+import NavBar from './components/navbar'
 import ImageDisplay  from './components/ImageDisplay';
 import Directions from './components/Mapping/Directions'
 import TabInputButton from './components/Input/TabInput';
@@ -14,6 +14,7 @@ import APIComponent from './components/geolocation/APIComponent'
 import GetDirectionMapOver from './components/geolocation/GetDirectionsMapOver';
 import AddRemoveStop from './AddRemoveStopOutside'
 import MapSpaceOld from "./components/MapSpaceOld"
+import DirectionsList from './components/DirectionList';
 
 export default function App() {
   const [responses, setResponses] = useState(null)
@@ -33,11 +34,12 @@ export default function App() {
    
     <BrowserRouter>
       <Container >
-        {/* <NavBar  /> */}
+        <NavBar  />
           <Routes>
           <Route path="/" element={<ImageDisplay />} />
           {/* <Route path='/imagedisplay' element={<ImageDisplay />}/> */}
           <Route path='/mapspace' element={<MapSpace />}/>
+          <Route path='/directionslist' element={<DirectionsList />}/>
           <Route path='/createroute' element={<CreateRoute onResponseChange={handleResponsesChange} />}/>
           <Route path='/directions' element={<Directions />}/>
           <Route path='/tabinputbutton' element={<TabInputButton />}/>

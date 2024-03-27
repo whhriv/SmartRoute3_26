@@ -3,10 +3,11 @@ background-color: #08A5F7 !important;
 }
 
 input {
-    /* background-color: #08A5F7 !important;
-    color: #A5F708 !important; */
-    border: black;
-    border-radius: 75%;
+    background-color: #95d5f8 !important;
+    /* margin: '4px'; */
+    /* color: #A5F708 !important; */
+    border: black !important;
+    /* border-radius: '75%'; */
 }
 success {
     background-color: #A5F708 !important;
@@ -50,8 +51,8 @@ success {
     --bs-btn-disabled-bg: ##F708a5;
     --bs-btn-disabled-border-color: ##F708a5;
     border-radius: 75% !important;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     display: flex;
     align-items: center;
