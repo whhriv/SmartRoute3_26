@@ -1,8 +1,11 @@
 .navbar-brand {
 
 
-background: rgba(0,0,0,0.4) !important;
+background: rgba(0,0,0,0.0) !important;
 
+}
+.navbar {
+    background: rgba(0,0,0,0.0) !important;
 }
 
 
@@ -38,7 +41,9 @@ p {
   padding-top: 0px;
   margin: 0.25rem;
   color: white;
-  background-color: #2d3748;
+  background-color: #025cf8;
+  /* background: rgba(248, 245, 245, 0) !important; */
+
   border-radius: 0.25rem;
 }
 ul {
@@ -51,4 +56,10 @@ li button {
   background: none;
   border: none;
   cursor: pointer;
+}
+
+.pink {
+    color: #F708a5 !important;
+    font-family:  "Lucida Console", monospace;
+    font-size: x-large
 }

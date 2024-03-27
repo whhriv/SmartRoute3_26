@@ -104,7 +104,7 @@ new Promise((resolve, reject)=>{
 
   return (
     <div style={{borderRadius: '10%'}}>
-    <FloatingLabel className="pt-3" controlId="start" label="Starting Point">
+    <FloatingLabel className="ms-3 me-5 pt-3 mb-5" controlId="start" label="Starting Point">
       <Form.Control
         className="w-90"
         type="text"
@@ -113,8 +113,9 @@ new Promise((resolve, reject)=>{
         onChange={(e) => setStart(e.target.value)}
       />
     </FloatingLabel>
+    
     {fields.map((field, index) => (
-      <div key={index} className="my-2 d-flex align-items-center">
+      <div key={index} className="ms-3 my-2 d-flex align-items-center">
         <FloatingLabel controlId={`stop${index}`} label="Add Stop" className="flex-grow-1">
           <Form.Control
             className="w-100"
@@ -124,18 +125,18 @@ new Promise((resolve, reject)=>{
             onChange={(e) => handleChange(index, e)}
           />
         </FloatingLabel>
-        <Button variant="outline-danger" onClick={() => removeField(index)}>
+        <Button className="ms-2" variant="outline-danger" onClick={() => removeField(index)}>
           X
         </Button>
       </div>
     ))}
-    <div className="d-flex justify-content-end">
+    <div className="mt-3 mb-1 me-5 d-flex justify-content-end">
       <Button variant="primary" onClick={addField}>
         +
       </Button>
     </div>
-    <div className="pb-3 d-flex justify-content-center">
-      <Button variant="success" onClick={handleFormSubmit}>Generate your Route</Button>
+    <div className="mb-5 pb-5 d-flex justify-content-center">
+      <Button className="my-4" variant="success" onClick={handleFormSubmit}>Generate your Route</Button>
     </div>
   </div>
 );
