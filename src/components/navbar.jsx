@@ -21,7 +21,7 @@ function NavBar() {
           {/* <NavLink exact to="/createroute" activeClassName="activeClicked">CreateRoute</NavLink> */}
 
             <Nav.Link className=" me-5" href="/CreateRoute">CREATE</Nav.Link>
-            <Nav.Link className="ms-5 me-5" href="/MapSpace">VIEW</Nav.Link>
+            <Nav.Link className="ms-5 me-5" href="/MapSpaceOld">VIEW</Nav.Link>
             <Nav.Link className="ms-5 " href="/DirectionsList">LIST</Nav.Link>
             {/* <Nav.Link href="/TabInputButton">Input Tests</Nav.Link>
             <Nav.Link href="/LocationSearch">Location Search</Nav.Link>
